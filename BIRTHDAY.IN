@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy 20th Birthday Kanchan 🎉</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1 class="title">🎂 Happy 20th Birthday Kanchan 🎂</h1>
+    <p class="subtitle">3rd February – A special day for a special girl 💖</p>
+
+    <div class="cake">🎂</div>
+
+    <h2 class="age">🎉 20 Years of Awesomeness 🎉</h2>
+
+    <div class="gallery">
+        <img src="images/photo1.jpg" alt="Kanchan Photo 1">
+        <img src="images/photo2.jpg" alt="Kanchan Photo 2">
+        <img src="images/photo3.jpg" alt="Kanchan Photo 3">
+    </div>
+
+    <button onclick="showWish()">Click for Birthday Wish 🎁</button>
+
+    <p id="wish"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #ff758c, #ff7eb3);
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    color: #fff;
+}
+
+.container {
+    padding: 40px;
+}
+
+.title {
+    font-size: 3rem;
+    animation: glow 2s infinite alternate;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.age {
+    font-size: 1.8rem;
+    margin: 15px 0;
+}
+
+.cake {
+    font-size: 100px;
+    animation: bounce 1.5s infinite;
+}
+
+.gallery img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+button {
+    margin-top: 25px;
+    padding: 14px 30px;
+    font-size: 17px;
+    border: none;
+    border-radius: 30px;
+    background: #ff1744;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #d50000;
+}
+
+#wish {
+    margin-top: 25px;
+    font-size: 1.4rem;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #fff; }
+    to { text-shadow: 0 0 25px #ff1744; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+function showWish() {
+    document.getElementById("wish").innerHTML =
+        "💖 Happy 20th Birthday Kanchan! 💖<br>May your life be full of love, smiles, success and beautiful moments. Keep shining always ✨🎉";
+}
+
